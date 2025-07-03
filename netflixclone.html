@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix Clone</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #111;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+      z-index: 10;
+      align-items: center;
+    }
+
+    .navbar img {
+      height: 40px;
+    }
+
+    .navbar.menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Banner */
+    .banner {
+      position: relative;
+      background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/6e5dbb1d-f7bb-41c1-9b2a-c020e02c1d29/3aeb275f-1e52-4c1d-9996-ff405f7b1a36/IN-en-20240429-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+      background-size:cover;
+      background-position: center;
+      height: 50vh;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 30px;
+    }
+
+    .banner-content {
+      max-width: 600px;
+    }
+
+    .banner-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .banner-content p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .banner-content button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: red;
+      border: none;
+      color: white;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    /* Movie Rows */
+    .row {
+      margin-top: 20px;
+      padding: 0 30px;
+    }
+
+    .row h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .row-posters {
+      display: flex;
+      overflow-x: scroll;
+      gap: 10px;
+    }
+
+    .row-posters::-webkit-scrollbar {
+      display: none;
+    }
+
+    .row-posters img {
+      width: 200px;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .row-posters img:hover {
+      transform: scale(1.08);
+    }
+
+    @media (max-width: 768px) {
+      .banner-content h1 {
+        font-size: 2rem;
+      }
+
+      .row-posters img {
+        width: 130px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" />
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Movies</a>
+      <a href="#">Latest</a>
+      <a href="#">My List</a>
+    </div>
+  </div>
+
+  <header class="banner">
+    <div class="banner-content">
+      <h1>Stranger Things</h1>
+      <p>When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying
+        supernatural forces and one strange littl girl.</p>
+      <button>Play</button>
+      <button>My List</button>
+    </div>
+  </header>
+
+  <section class="row">
+    <h2>Trending Now</h2>
+    <div class="row-posters">
+      <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="movie1">
+      <img src="https://image.tmdb.org/t/p/w500/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg" alt="movie2">
+      <img src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="movie3">
+      <img src="https://image.tmdb.org/t/p/w500/lNyLSOKMMeUPr1RsL4KcRuIXwHt.jpg" alt="movie4">
+      <img src="https://image.tmdb.org/t/p/w500/rTh4K5uw9HypmpGslcKd4QfHl93.jpg" alt="movie5">
+       <img src="https://image.tmdb.org/t/p/w500/lNyLSOKMMeUPr1RsL4KcRuIXwHt.jpg" alt="movie6">
+      <img src="https://image.tmdb.org/t/p/w500/rTh4K5uw9HypmpGslcKd4QfHl93.jpg" alt="movie7">
+    </div>
+  </section>
+
+  <section class="row">
+    <h2>Top Rated</h2>
+    <div class="row-posters">
+      <img src="https://image.tmdb.org/t/p/w500/xGuOF1T3WmPsAcQEQJfnG7Ud9f8.jpg" alt="movie7">
+      <img src="https://image.tmdb.org/t/p/w500/xGuOF1T3WmPsAcQEQJfnG7Ud9f8.jpg" alt="movie7">
+      <img src="https://image.tmdb.org/t/p/w500/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg" alt="movie8">
+      <img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" alt="movie9">
+       <img src="https://image.tmdb.org/t/p/w500/xGuOF1T3WmPsAcQEQJfnG7Ud9f8.jpg" alt="movie7">
+      <img src="https://image.tmdb.org/t/p/w500/xGuOF1T3WmPsAcQEQJfnG7Ud9f8.jpg" alt="movie7">
+       <img src="https://image.tmdb.org/t/p/w500/xGuOF1T3WmPsAcQEQJfnG7Ud9f8.jpg" alt="movie7">
+      <img src="https://image.tmdb.org/t/p/w500/xGuOF1T3WmPsAcQEQJfnG7Ud9f8.jpg" alt="movie7">
+    </div>
+  </section>
+
+</body>
+
+</html>
